@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const mongoUriAtlas = `mongodb+srv://HexaTripV2Admin:${DB_PWD}@cluster0.bbgl5ax.mongodb.net/?retryWrites=true&w=majority&appName=hexa-trip`;
+const mongoUriAtlas = `mongodb+srv://HexaTripV2Admin:${process.env.DB_PWD}@cluster0.bbgl5ax.mongodb.net/?retryWrites=true&w=majority&appName=hexa-trip`;
 const mongoUriLocalhost = `mongodb://localhost:27017/hexa-trip`;
 
 let mongoUri = ``;
