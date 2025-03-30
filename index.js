@@ -52,7 +52,7 @@ const limitOptions = {
 app.use(rateLimit(limitOptions));
 
 // cors config :
-const allowedOrigins = ["https://hexatrip.netlify.app", "http://localhost:5173"];
+const allowedOrigins = ["https://hexatrip-front.netlify.app", "http://localhost:5173"];
 const corsOptions = {
 	origin: (origin, callback) => {
 		if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
