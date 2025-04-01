@@ -5,7 +5,8 @@ const Order = require("../models/Order");
 // check with authenticate later
 const getAll = async (req, res) => {
 	try {
-		const orders = await Order.find({}).populate("trip");
+		const { email } = req.user;
+		const orders = await Order.find({ email }).populate("trip");
 		return res.status(StatusCodes.OK).send(orders);
 	} catch (error) {
 		console.log(error);
