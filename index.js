@@ -12,7 +12,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 
 // Generate key :
 // const crypto = require("crypto");
-// const randomKey = crypto.randomBytes(32).toString("hex");
+// const randomKey = crypto.randomBytes(64).toString("hex");
 // console.log(randomKey);
 
 // routes :
