@@ -30,14 +30,14 @@ connectToDatabase();
 
 // config multer :
 app.locals.uploader = multer({
-	storage: multer.memoryStorage({}),
-	limits: { fileSize: 10 * 1024 * 1024 }, // Max size : 10 Mb
+	storage: multer.memoryStorage({}), // Utilisation de la mémoire pour stocker temporairement le fichier
+	limits: { fileSize: 10 * 1024 * 1024 }, // Limite la taille des fichiers à 10 Mo
 	fileFilter: (req, file, cb) => {
-		// Accept only images :
+		// Accepte uniquement les fichiers de type image :
 		if (file.mimetype.startsWith("image/")) {
-			cb(null, true);
+			cb(null, true); // Fichier accepté
 		} else {
-			cb(new Error("Only images are accepted"));
+			cb(new Error("Only images are accepted")); // Fichier rejeté
 		}
 	},
 });
