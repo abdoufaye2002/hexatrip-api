@@ -16,4 +16,4 @@ const validateRegister = [
 ]
 
 module.exports = validateRegister
-///kdkdk
+///kd
