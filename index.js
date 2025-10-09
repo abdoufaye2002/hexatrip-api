@@ -12,6 +12,7 @@ const orderRoutes = require("./routes/order.routes");
 const adviserRoutes = require("./routes/adviser.routes");
 const agencyRoutes = require("./routes/agency.routes");
 const tripRoutes = require("./routes/trips.routes");
+const authRoutes = require("./routes/auth.routes")
 const { StatusCodes } = require("http-status-codes");
 
 // instance :
@@ -47,6 +48,7 @@ app.use("/orders", orderRoutes);
 app.use("/advisers", adviserRoutes);
 app.use("/agencies", agencyRoutes);
 app.use("/trips", tripRoutes);
+app.use("/auth", authRoutes);
 
 // catch all :
 app.use((req, res) => {
