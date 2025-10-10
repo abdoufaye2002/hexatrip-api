@@ -15,4 +15,3 @@ const agencySchema = new Schema(
 const Agency = mongoose.model("Agency", agencySchema);
 
 module.exports = Agency;
-//
