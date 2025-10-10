@@ -19,12 +19,12 @@ const register = async (req, res) => {
         }
 
         // Hachage du mot de passe
-        const passwordHash = await bcrypt.hash(password, 10);
+        const passwordHash = await bcript.hash(password, 10);
 
         // Création de l'utilisateur
         const user = {
             username,
-            passwordHash,
+            password: passwordHash,
             email
         };
 
